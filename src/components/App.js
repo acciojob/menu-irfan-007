@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Card from "./Card";
 
 function App() {
   const arr = [
@@ -76,27 +77,6 @@ function App() {
     },
   ];
 
-  const makeCard = (obj, key) => {
-    return (
-      <div
-        key={key}
-        className="card"
-        data-test-id={`menu-item-${obj.category}`}
-      >
-        <div className="img">
-          <img src="" alt="" />
-        </div>
-        <div className="info">
-          <div className="info-head">
-            <div className="title">{obj.title}</div>{" "}
-            <div className="price">{obj.price}</div>{" "}
-          </div>
-          <div className="description">{obj.desc}</div>
-        </div>
-      </div>
-    );
-  };
-
   const [category, setCategory] = useState("all");
   return (
     <div id="main">
@@ -135,12 +115,13 @@ function App() {
           Shakes
         </button>
       </div>
-
-      {category == "all"
-        ? arr.map((elem, key) => makeCard(elem, key))
-        : arr
-            .filter((el) => el.category === category)
-            .map((elem, key) => makeCard(elem, key))}
+      <div className="cards">
+        {category == "all"
+          ? arr.map((elem, i) => <Card key={i} obj={elem} />)
+          : arr
+              .filter((el) => el.category === category)
+              .map((elem, i) => <Card key={i} obj={elem} />)}
+      </div>
     </div>
   );
 }
