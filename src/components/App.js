@@ -78,7 +78,7 @@ function App() {
 
   const makeCard = (obj) => {
     return (
-      <div className="card">
+      <div className="card" data-test-id={`menu-item-${obj.category}`}>
         <div className="img">
           <img src="" alt="" />
         </div>
