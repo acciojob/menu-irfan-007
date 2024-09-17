@@ -84,7 +84,6 @@ function App() {
       <div className="navs">
         <button
           className="nav"
-          id="filter-btn-1"
           //   data-test-id="menu-item-all"
           onClick={() => setCategory("all")}
         >
@@ -92,7 +91,7 @@ function App() {
         </button>
         <button
           className="nav"
-          id="filter-btn-2"
+          id="filter-btn-1"
           //   data-test-id="menu-item-breakfast"
           onClick={() => setCategory("breakfast")}
         >
@@ -100,7 +99,7 @@ function App() {
         </button>
         <button
           className="nav"
-          id="filter-btn-3"
+          id="filter-btn-2"
           //   data-test-id="menu-item-lunch"
           onClick={() => setCategory("lunch")}
         >
@@ -108,7 +107,7 @@ function App() {
         </button>
         <button
           className="nav"
-          id="filter-btn-4"
+          id="filter-btn-3"
           //   data-test-id="menu-item-shakes"
           onClick={() => setCategory("shakes")}
         >
