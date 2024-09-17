@@ -95,19 +95,35 @@ function App() {
 
   const [category, setCategory] = useState("all");
   return (
-    <div>
+    <div id="main">
       <h1>Our Menu</h1>
       <div className="navs">
-        <button className="nav" onClick={() => setCategory("all")}>
+        <button
+          className="nav"
+          id="filter-btn-1"
+          onClick={() => setCategory("all")}
+        >
           All
         </button>
-        <button className="nav" onClick={() => setCategory("breakfast")}>
+        <button
+          className="nav"
+          id="filter-btn-2"
+          onClick={() => setCategory("breakfast")}
+        >
           Breakfast
         </button>
-        <button className="nav" onClick={() => setCategory("lunch")}>
+        <button
+          className="nav"
+          id="filter-btn-3"
+          onClick={() => setCategory("lunch")}
+        >
           Lunch
         </button>
-        <button className="nav" onClick={() => setCategory("shakes")}>
+        <button
+          className="nav"
+          id="filter-btn-4"
+          onClick={() => setCategory("shakes")}
+        >
           Shakes
         </button>
       </div>
