@@ -76,9 +76,13 @@ function App() {
     },
   ];
 
-  const makeCard = (obj) => {
+  const makeCard = (obj, key) => {
     return (
-      <div className="card" data-test-id={`menu-item-${obj.category}`}>
+      <div
+        key={key}
+        className="card"
+        data-test-id={`menu-item-${obj.category}`}
+      >
         <div className="img">
           <img src="" alt="" />
         </div>
@@ -129,10 +133,10 @@ function App() {
       </div>
       <div className="cards">
         {category == "all"
-          ? arr.map((elem) => makeCard(elem))
+          ? arr.map((elem, key) => makeCard(elem, key))
           : arr
               .filter((el) => el.category === category)
-              .map((elem) => makeCard(elem))}
+              .map((elem, key) => makeCard(elem, key))}
       </div>
     </div>
   );
