@@ -81,7 +81,7 @@ function App() {
       <div
         key={key}
         className="card"
-        // data-test-id={`menu-item-${obj.category}`}
+        data-test-id={`menu-item-${obj.category}`}
       >
         <div className="img">
           <img src="" alt="" />
@@ -105,7 +105,7 @@ function App() {
         <button
           className="nav"
           id="filter-btn-1"
-          data-test-id="menu-item-all"
+          //   data-test-id="menu-item-all"
           onClick={() => setCategory("all")}
         >
           All
@@ -113,7 +113,7 @@ function App() {
         <button
           className="nav"
           id="filter-btn-2"
-          data-test-id="menu-item-breakfast"
+          //   data-test-id="menu-item-breakfast"
           onClick={() => setCategory("breakfast")}
         >
           Breakfast
@@ -121,7 +121,7 @@ function App() {
         <button
           className="nav"
           id="filter-btn-3"
-          data-test-id="menu-item-lunch"
+          //   data-test-id="menu-item-lunch"
           onClick={() => setCategory("lunch")}
         >
           Lunch
@@ -129,19 +129,18 @@ function App() {
         <button
           className="nav"
           id="filter-btn-4"
-          data-test-id="menu-item-shakes"
+          //   data-test-id="menu-item-shakes"
           onClick={() => setCategory("shakes")}
         >
           Shakes
         </button>
       </div>
-      <div className="cards">
-        {category == "all"
-          ? arr.map((elem, key) => makeCard(elem, key))
-          : arr
-              .filter((el) => el.category === category)
-              .map((elem, key) => makeCard(elem, key))}
-      </div>
+
+      {category == "all"
+        ? arr.map((elem, key) => makeCard(elem, key))
+        : arr
+            .filter((el) => el.category === category)
+            .map((elem, key) => makeCard(elem, key))}
     </div>
   );
 }
